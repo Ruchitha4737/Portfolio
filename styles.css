@@ -1,0 +1,310 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #fef3f0;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #111827;
+  color: #e5e7eb;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 90px auto 40px auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: #ffffffcc;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  z-index: 1000;
+}
+
+body.dark .site-header {
+  background-color: #020617ee;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.nav a.active,
+.nav a:hover {
+  border-bottom: 2px solid #2563eb;
+  color: #111827;
+}
+
+body.dark .nav a {
+  color: #e5e7eb;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+body.dark .site-footer {
+  border-color: #1f2937;
+}
+
+/* Buttons */
+
+.btn-primary,
+.btn-outline,
+.btn-secondary {
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-outline {
+  border-color: #2563eb;
+  color: #2563eb;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: #eff6ff;
+}
+
+.btn-secondary {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+body.dark .btn-secondary {
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+/* Hero section */
+
+.hero {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlight {
+  color: #2563eb;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+body.dark .subtitle {
+  color: #9ca3af;
+}
+
+.hero-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  text-align: center;
+}
+
+body.dark .hero-card {
+  background-color: #020617;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.7);
+}
+
+.profile-img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Sections */
+
+.section {
+  margin-top: 2rem;
+}
+
+.section h2,
+.section h1 {
+  margin-bottom: 0.5rem;
+}
+
+.section p {
+  margin-bottom: 0.5rem;
+}
+
+/* Chips */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.chip {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background-color: #e5e7eb;
+  font-size: 0.85rem;
+}
+
+body.dark .chip {
+  background-color: #1f2937;
+}
+
+/* Lists */
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list li {
+  margin-bottom: 0.4rem;
+}
+
+/* Tables */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+body.dark .table {
+  background-color: #020617;
+}
+
+.table th,
+.table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.6rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+body.dark .table th,
+body.dark .table td {
+  border-color: #1f2937;
+}
+
+.table th {
+  background-color: #eff6ff;
+}
+
+body.dark .table th {
+  background-color: #111827;
+}
+
+/* Cards */
+
+.card {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+  margin-bottom: 1rem;
+}
+
+body.dark .card {
+  background-color: #020617;
+}
+
+/* Signature */
+
+.signature {
+  margin-top: 1rem;
+}
+
+/* Scroll to top button */
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2000;
+  border: none;
+  outline: none;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  padding: 0.6rem 0.8rem;
+  border-radius: 999px;
+  display: none;
+  font-size: 1rem;
+}
+
+#scrollTopBtn:hover {
+  background-color: #1d4ed8;
+}
